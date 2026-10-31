@@ -1,0 +1,52 @@
+body{
+    background-color: bisque;
+}
+#btncon{
+    background-color:rgb(225, 0, 0);
+    width: 430px;
+    height: 275px ;
+    border-radius: 50px;
+    margin: 200px auto;
+}
+h1{
+    padding:30px 20px;
+    margin: 10px auto;
+    color:gold;
+    text-align: center;
+}
+p{
+    color:goldenrod;
+    text-align: center;
+    margin:2px auto;
+}
+#btns{
+    padding:2px 20px;
+    margin:5px auto;
+    text-align: center;
+}
+#btnn{
+    border-radius: 10px;
+    background-color: rgb(255, 217, 0);
+    color:red;
+    padding:5px 10px;
+    margin:1px 10px;
+    position: absolute;
+    left:650px;
+    top:418px;
+    transition: left 0.3s linear, top 0.3s linear;
+    scale: 1;
+}
+#ybtn{
+    border-radius: 10px;
+    background-color: rgb(255, 217, 0);
+    color:red;
+    padding:5px 10px;
+    margin:1px 10px;
+    scale: 1;
+    position: relative;
+    left:50px;
+}
+#qiu{
+    scale:1;
+    color:yellow;
+}
