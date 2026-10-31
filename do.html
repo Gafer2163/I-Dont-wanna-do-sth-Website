@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <title>Play Game Pls!</title>
+        <meta charset="utf-8">
+        <style>@import url(css.css);</style>
+    </head>
+    <body>
+        <div id="hbody">
+        <div id="btncon">
+            <h1>我不想做嘢</h1>
+            <br>
+            <p>放我打遊戲吧</p>
+            <p id="qiu">求求你了</p>
+            <br>
+            <div id="btns">
+            <button id="btnn">不能</button>
+            <button onclick="acyah()" id="ybtn">能</button>
+            </div>
+        </div>
+        </div>
+        <script>
+            const container = document.getElementById('btncon');
+            const nobtn = document.getElementById("btnn");
+            const yesbtn = document.getElementById("ybtn");
+            const bodyarea = document.getElementById("hbody");
+            const maxX = bodyarea.clientWidth - nobtn.clientWidth;
+            const maxY = bodyarea.clientHeight - nobtn.clientHeight;
+            const qiusty = document.getElementById('qiu');
+            let bsty = 1;
+            let nbsty = 1;
+            function nobtne() {
+                const ranY = Math.random() * maxY;
+                const ranX = Math.random() * maxX;
+                nobtn.style.left = ranX + 'px';
+                nobtn.style.top = ranY + 'px';
+                bsty += 0.1;
+                if(!(nbsty <= 0.2)){ nbsty -= 0.05;}
+                yesbtn.style.scale =bsty
+                qiusty.style.scale = bsty
+                btnn.style.scale =nbsty
+            }
+            nobtn.addEventListener('mouseover', () => {
+                nobtne();
+            });
+            function acyah(){
+                btnn.style.scale = 0;
+                container.innerHTML = '<h1>嘿嘿，去打機啦</h1>';
+            }
+        </script>
+    </body>
+</html>
